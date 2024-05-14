@@ -1,28 +1,27 @@
-// import React, { useEffect, useState } from 'react';
-// import { apiValue } from "../api/api";
+import React from 'react';
+import { TextField, Button, Box } from '@mui/material';
+import './login.css'
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  // const [resultsArray, setResultsArray] = useState([]);
 
-  // useEffect(() => {
-  //   async function fetchAndSetData() {
-  //     try {
-  //       const data = await apiValue();
-  //       setResultsArray(data);
-  //     } catch (error) {
-  //       console.error('Erro ao buscar os dados:', error);
-  //     }
-  //   }
 
-  //   fetchAndSetData();
-  // }, []);
+  const history = useNavigate();
 
   return (
-    <div>
-      <header>
-        <p>login</p>
-      </header>
-    </div>
+    <Box
+      className="formContainer"
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1 },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField id="outlined-basic" label="Name" variant="outlined" />
+      <Button variant="contained" size="large" onClick={() => history('/game')}>Start</Button>
+      <Button variant="contained" size="small">Regras</Button>
+    </Box>
   );
 }
 

@@ -1,0 +1,11 @@
+.formContainer {
+    width: 25ch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.submitButton {
+  margin-top: 10px;
+}
